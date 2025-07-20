@@ -7,7 +7,7 @@ class WavToMp3Converter
     static void Main(string[] args)
     {
         Console.WriteLine("Enter the full path to the .wav file:");
-        string inputFilePath = Console.ReadLine()?.Trim().Trim('"');
+        string? inputFilePath = Console.ReadLine()?.Trim()?.Trim('\"', '\'');
 
         if (string.IsNullOrEmpty(inputFilePath))
         {
